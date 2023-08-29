@@ -1,6 +1,7 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
+
 const config = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-onboarding",
@@ -10,18 +11,15 @@ const config = {
       name: '@storybook/addon-styling',
       options: {
         sass: {
-          // Require your Sass preprocessor here
           implementation: require('sass'),
         },
       },
     },
   ],
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
-  },
+  framework: "@storybook/react-vite",
   docs: {
-    autodocs: "tag",
+    autodocs: true,
   },
 };
+
 export default config;
