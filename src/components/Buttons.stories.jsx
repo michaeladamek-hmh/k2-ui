@@ -3,10 +3,10 @@ import { Button } from './Button';
 export default {
   component: Button,
   title: 'Button',
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-  },
-  tags: ['autodocs'],
+  }
 };
 
 export const Primary = args => <Button {...args} />;

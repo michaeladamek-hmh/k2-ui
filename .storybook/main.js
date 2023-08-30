@@ -1,7 +1,10 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 
+import { mergeConfig } from 'vite';
+
 const config = {
-  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  framework: "@storybook/react-vite",
+  stories: ["../src/components/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-onboarding",
@@ -16,10 +19,17 @@ const config = {
       },
     },
   ],
-  framework: "@storybook/react-vite",
-  docs: {
-    autodocs: true,
+  core: {
+    builder: '@storybook/builder-vite',
   },
+  docs: {
+    autodocs: 'tag',
+  },
+  typescript: {
+    reactDocgen: 'react-docgen',
+    skipBabel: true,
+    check: false,
+  }
 };
 
 export default config;
