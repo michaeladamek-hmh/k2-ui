@@ -22,9 +22,9 @@ Default.args = {
 }
 
 Correct.args = {
-	...Default.args,
 	value: 'answer',
 	correct: true,
+	incorrect: false,
 	disabled: true
 }
 
@@ -32,7 +32,7 @@ InCorrect.args = {
 	value: 'answer',
 	correct: false,
 	incorrect: true,
-	disabled: true
+	disabled: false
 }
 
 Disabled.args = {
