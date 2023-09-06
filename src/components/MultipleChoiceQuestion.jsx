@@ -18,7 +18,7 @@ export function MultipleChoseQuestion({ type, id, correct, incorrect, image, che
 	const isNotCorrect = incorrect ? 'incorrect' : ''
 
 	return (
-		<>
+		<form className='mcq'>
 			<input 
 				type={type} 
 				id={id} 
@@ -33,6 +33,6 @@ export function MultipleChoseQuestion({ type, id, correct, incorrect, image, che
 				? <img src={Zelda} />: 'Mouse rides a bike'
 			}
 			</label> 
-		</>  
+		</form>  
 	)
 }
